@@ -1,0 +1,7 @@
+{
+  "name": "ionic-super",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

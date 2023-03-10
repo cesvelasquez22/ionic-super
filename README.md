@@ -1,4 +1,4 @@
-# Ionic components guide
+# Ionic super guide
 
 Inspired by ionic-super starter template but upgraded.
 

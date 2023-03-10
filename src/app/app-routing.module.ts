@@ -13,7 +13,7 @@ export const appRoutes: Routes = [
         path: 'inline-modals',
         loadChildren: () =>
           import(
-            './components/inline-modals/inline-modals-routing.module'
+            './components/inline-modals/inline-modals.routes'
           ).then((m) => m.routes),
       },
     ],

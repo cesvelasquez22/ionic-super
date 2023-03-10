@@ -1,13 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouteReuseStrategy, RouterModule } from '@angular/router';
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { HttpClientModule } from '@angular/common/http';
+import { Component, Inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { IonicModule } from '@ionic/angular';
+import { EnvConfig, ENV_CONFIG } from 'src/environments/environment.config';
+import { AppConfig, APP_CONFIG } from './app.config';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule],
+  imports: [CommonModule, IonicModule, RouterModule, HttpClientModule],
 })
 export class AppComponent {
   public appPages = [
@@ -24,5 +27,10 @@ export class AppComponent {
     'Virtual scrolling',
     'Alerts service',
   ];
-  constructor() {}
+  constructor(
+    @Inject(APP_CONFIG) config: AppConfig,
+    @Inject(ENV_CONFIG) environment: EnvConfig
+  ) {
+    console.log({ config, environment });
+  }
 }

@@ -11,8 +11,18 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inline Modals', url: '/components/inline-modals', icon: 'mail' },
+    {
+      title: 'Inline Modals',
+      url: '/components/inline-modals',
+      icon: 'chatbox',
+    },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  public labels = [
+    'Light/dark mode',
+    'Media watcher',
+    'List views',
+    'Virtual scrolling',
+    'Alerts service',
+  ];
   constructor() {}
 }

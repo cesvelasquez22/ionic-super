@@ -3,8 +3,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
-import { EnvConfig, ENV_CONFIG } from 'src/environments/environment.config';
-import { AppConfig, APP_CONFIG } from './app.config';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -27,10 +25,5 @@ export class AppComponent {
     'Virtual scrolling',
     'Alerts service',
   ];
-  constructor(
-    @Inject(APP_CONFIG) config: AppConfig,
-    @Inject(ENV_CONFIG) environment: EnvConfig
-  ) {
-    console.log({ config, environment });
-  }
+  constructor() {}
 }

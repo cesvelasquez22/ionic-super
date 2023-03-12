@@ -3,10 +3,39 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>inline-modal</ion-title>
+    <ion-title>Inline modals</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  
+  <ion-toolbar>
+    <ion-title>Discover</ion-title>
+  </ion-toolbar>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col
+        size="6"
+        sizeSm="4"
+        sizeMd="3"
+        sizeLg="3"
+        *ngFor="let movie of movies$ | async"
+      >
+        <ion-card button>
+          <ion-card-header>
+            <ion-card-subtitle
+              >{{ movie.release_date | date:'YYYY' }}</ion-card-subtitle
+            >
+            <ion-card-title
+              class="ion-text-nowrap"
+              style="overflow: hidden; text-overflow: ellipsis"
+              >{{ movie.title }}</ion-card-title
+            >
+          </ion-card-header>
+          <ion-img
+            [src]="movie.backdrop_path | image"
+          ></ion-img>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

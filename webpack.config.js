@@ -15,6 +15,7 @@ module.exports = {
       // Insert the keys to your environment variables here.
       NODE_ENV: process.env.NODE_ENV,
       MOVIEDB_API: process.env.MOVIEDB_API,
+      MOVIEDB_IMG_URL: process.env.MOVIEDB_IMG_URL,
       MOVIEDB_API_KEY: process.env.MOVIEDB_API_KEY,
     }),
   ],
